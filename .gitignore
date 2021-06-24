@@ -2,4 +2,5 @@
 .vscode/
 .idea/
 *.ignore.*
+*ignore.*
 ###< Josee9988/Compress-PDFs ###
