@@ -24,7 +24,6 @@ if len(sys.argv) > 1 and os.path.exists(Path(sys.argv[1]).resolve()):
 else:  # path not found or not defined (use the current working directory)
     ACTION_PATH = os.getcwd()
 
-
 ilovepdf = ILovePdf(
     'project_public_04c63dae8446159db1ea601538ef45ed_BO_347a60cf121bc09ba69d8e6327ed792dc9', verify_ssl=True)
 task = ilovepdf.new_task('compress')
@@ -51,7 +50,7 @@ zip_file_location = glob.glob(os.path.join(
 with zipfile.ZipFile(zip_file_location, 'r') as zip_ref:
     zip_ref.extractall(ACTION_PATH)
 time.sleep(5)
-compressed_pdfs = glob.glob(COMPRESSED_PDFS_PATTERN)
+compressed_pdfs = glob.glob(os.path.join(ACTION_PATH, COMPRESSED_PDFS_PATTERN))
 
 # replace the recently compressed files to their original file location
 for original_file in pdf_files:
