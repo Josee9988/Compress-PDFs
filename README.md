@@ -20,19 +20,77 @@
 
 ## ⚡ **Installation**
 
-* <!-- ... [SHOW HOW YOUR PROJECT IS INSTALLED] -->
+1. Clone the repository and `cd` into in
+
+2. *Install pip3*
+
+    ```bash
+    sudo apt install python3-pip
+    # verify it with pip3 --version
+    ```
+
+3. Instal the ilovepdf dependency
+
+    ```bash
+    pip3 install pylovepdf
+    ```
+
+4. Make the script executable from anywhere
+
+    ```bash
+    bash MAKE_SCRIPT_GLOBAL.sh
+    ```
+
+5. Run it ;)
+
+    ```bash
+    python3 compress.py /PATH/TO/YOUR/DIR/
+    ```
 
 ---
 
 ## 🚀 **Usage**
 
-* <!-- ... [SHOW HOW YOUR PROJECT IS USED] -->
+* After running the script `MAKE_SCRIPT_GLOBAL.sh` you can call the script from anywhere in your system with: `python3 compress.py`
+
+* The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up in order to compress all the pdfs inside the passed directory.
+
+* In case an error happens, or there are multiple pdfs with the same name or simply the program doesn't know how to replace them, it will prompt an error and you will have to manually move the compressed pdf (which will be in the directory passed as an argument) to the desired directory.
 
 ---
 
 ## 🌲 **Project tree**
 
-* <!-- ... [SHOW YOUR PROJECT TREE HERE IF USEFUL] -->
+```bash
+.
+├── compress.py
+├── .github
+│   ├── CODE_OF_CONDUCT.md
+│   ├── CODEOWNERS
+│   ├── config.yml
+│   ├── CONTRIBUTING.md
+│   ├── FUNDING.yml
+│   ├── issue_label_bot.yaml
+│   ├── ISSUE_TEMPLATE
+│   │   ├── 1-bug-report.md
+│   │   ├── 2-failing-test.md
+│   │   ├── 3-docs-bug.md
+│   │   ├── 4-feature-request.md
+│   │   ├── 5-enhancement-request.md
+│   │   ├── 6-security-report.md
+│   │   ├── 7-question-support.md
+│   │   └── config.yml
+│   ├── ISSUE_TEMPLATE.md
+│   ├── pull_request_template.md
+│   ├── SECURITY.md
+│   ├── settings.yml
+│   └── SUPPORT.md
+├── .gitignore
+├── MAKE_SCRIPT_GLOBAL.sh
+└── README.md
+
+2 directories, 23 files
+```
 
 ---
 
