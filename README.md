@@ -20,7 +20,7 @@
 
 ## ⚡ **Installation**
 
-1. Clone the repository and `cd` into in
+1. Clone the repository and `cd` into it
 
 2. *Install pip3*
 
@@ -41,7 +41,17 @@
     bash MAKE_SCRIPT_GLOBAL.sh
     ```
 
-5. Run it ;)
+5. Rename `.env.example` to `.env`.
+
+    ```bash
+    mv -v .env.example .env # rename to .env
+    ```
+
+6. Add you [IlovePDF](https://developer.ilovepdf.com/) public key
+
+    * Modify the `.env` file add update the **`PUBLIC_KEY`** variable with your own public key from [the IlovePDF developer's site](https://developer.ilovepdf.com/)
+
+7. Run it ;)
 
     ```bash
     python3 compress.py /PATH/TO/YOUR/DIR/
