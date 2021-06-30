@@ -10,6 +10,7 @@ import time
 import zipfile
 import re
 import sys
+import configparser
 
 ALL_PDFS_PATTERN = "*.pdf"
 COMPRESSED_PDFS_PATTERN = "*compress*.pdf"
@@ -18,6 +19,13 @@ REGEX_ADDED_COMPRESSED_FILE_NAME = "_compress_\d\d\-\d\d\-\d\d\d\d"
 pdf_files = []
 compressed_pdfs = []
 
+# obtain public key from the .env file
+config = configparser.ConfigParser()
+config.read('.env')
+public_key = config['ILOVEPDF_USER_INFO']['PUBLIC_KEY']
+
+print(public_key)
+
 # path found as first argument
 if len(sys.argv) > 1 and os.path.exists(Path(sys.argv[1]).resolve()):
     ACTION_PATH = sys.argv[1]
@@ -25,8 +33,7 @@ else:  # path not found or not defined (use the current working directory)
     ACTION_PATH = os.getcwd()
 
 
-ilovepdf = ILovePdf(
-    'project_public_04c63dae8446159db1ea601538ef45ed_BO_347a60cf121bc09ba69d8e6327ed792dc9', verify_ssl=True)
+ilovepdf = ILovePdf(public_key, verify_ssl=True)
 task = ilovepdf.new_task('compress')
 
 for path, subdirs, files in os.walk(ACTION_PATH):  # find all the pdfs

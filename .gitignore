@@ -3,4 +3,5 @@
 .idea/
 *.ignore.*
 *ignore.*
+.env
 ###< Josee9988/Compress-PDFs ###
