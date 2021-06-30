@@ -29,12 +29,12 @@ ilovepdf = ILovePdf(
     'project_public_04c63dae8446159db1ea601538ef45ed_BO_347a60cf121bc09ba69d8e6327ed792dc9', verify_ssl=True)
 task = ilovepdf.new_task('compress')
 
-for path, subdirs, files in os.walk(ACTION_PATH):
+for path, subdirs, files in os.walk(ACTION_PATH):  # find all the pdfs
     for name in files:
         if fnmatch(name, ALL_PDFS_PATTERN):
             pdf_files.append(os.path.join(path, name))
 
-for file in pdf_files:
+for file in pdf_files:  # upload all the pdfs
     print("Uploading: "+file)
     task.add_file(file)
     task.set_output_folder(ACTION_PATH)
@@ -61,8 +61,8 @@ for original_file in pdf_files:
             if os.path.exists(Path(original_file).resolve()) and os.path.exists(Path(compressed).resolve()):
                 print("Replacing "+compressed+" to "+original_file)
                 shutil.move(Path(compressed), Path(original_file))
-            else:
-                print("\033[1;31;40mE:\033[0m Couldn't replace: " +
+            else:  # file couldn't be replaced
+                print("\033[1;31;40mError:\033[0m Couldn't replace: " +
                       compressed+" to " + original_file)
 
 # delete zip file
