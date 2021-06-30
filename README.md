@@ -1,5 +1,5 @@
-<!-- Write your README.md file. Build something amazing! This README.md template can guide you to build your project documentation, but feel free to modify it as you wish -->
-# 🔥 **Josee9988/Compress-PDFs**
+<!-- markdownlint-disable MD032 MD033-->
+# 📦 **Josee9988/Compress-PDFs**
 
 <div align="center">
   <a href="https://github.com/Josee9988/Compress-PDFs/issues">
@@ -14,7 +14,7 @@
 
 ## 🤔 **About the project**
 
-* <!-- ... [WHY DID YOU CREATED THIS PROJECT?, MOTIVATION, PURPOSE, DESCRIPTION, OBJECTIVES, etc] -->
+* A CLI tool to compress 📦 all PDFs recursively in a directory.
 
 ---
 
@@ -55,7 +55,11 @@
 
 * The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up in order to compress all the pdfs inside the passed directory.
 
-* In case an error happens, or there are multiple pdfs with the same name or simply the program doesn't know how to replace them, it will prompt an error and you will have to manually move the compressed pdf (which will be in the directory passed as an argument) to the desired directory.
+* Script profile
+
+  ```bash
+  python3 compress.py <Directory path>
+  ```
 
 ---
 
@@ -96,27 +100,7 @@
 
 ## 📝 **Additional notes**
 
-* <!-- ... [ADD ADDITIONAL NOTES] -->
-
----
-
-## 📸 **Screenshots**
-
-<!-- ... [SOME DESCRIPTIVE IMAGES] -->
-
----
-
-## 🍰 **Supporters and donators**
-
-We are currently looking for new donators to help and maintain this project! ❤️
-
-By donating, you will help the development of this project and, *you will be featured in this Compress-PDFs's README.md* so everyone can see your kindness and visit your content ⭐.
-
-<a href="https://github.com/sponsors/Josee9988"> <!-- MODIFY THIS LINK TO YOUR MAIN DONATING SITE IF YOU ARE NOT IN THE GITHUB SPONSORS PROGRAM -->
-  <img src="https://img.shields.io/badge/Sponsor-Josee9988/Compress PDFs-blue?logo=github-sponsors&style=for-the-badge&color=red">
-</a>
-
-<!-- LINK TO YOUR DONATING PAGES HERE -->
+* In case an error happens because there are multiple pdfs with the same name or simply the program doesn't know how to replace them, an error will be prompt and you will have to manually move the compressed pdf (which will be in the directory passed as an argument) to the desired directory.
 
 ---
 
@@ -126,7 +110,9 @@ Compress-PDFs was generated from *[Josee9988/project-template](https://github.co
 
 🕵️ Extra recommendations
 
-* <!-- If you recommend installing anything special, or if you recommend using X thing for the good use of your project...-->
+* Always check the console output to check if any error happened and if so, you will have to manually move the non-moved compressed file to its location.
+
+* Also always perform a copy of the folder before using the script as it will remove the old PDFs and it might cause some data loss if an error occurs.
 
 ---
 
@@ -143,11 +129,9 @@ Enjoy! 😃
 
 ---
 
-## ⚖️📝 **License and Changelog**
+## ⚖️📝 **License**
 
 See the license in the '**[LICENSE](LICENSE)**' file.
-
-Watch the changes in the '**[CHANGELOG.md](CHANGELOG.md)**' file.
 
 ---
 
