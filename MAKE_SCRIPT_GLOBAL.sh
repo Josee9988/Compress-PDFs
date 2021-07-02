@@ -1,5 +1,6 @@
 #!/bin/bash
 COMPRESS_SCRIPT="compress.py"
+CURRENT_DIR=$(pwd)
 
 if [ ! -f "$COMPRESS_SCRIPT" ]; then # check if the compress script file is found
     echo -e "Can not find the ${COMPRESS_SCRIPT} script"
@@ -13,8 +14,8 @@ if [ "$EUID" -ne 0 ]; then # if not it will tell the user and exit
     exit 1
 fi
 
-chmod +x $COMPRESS_SCRIPT
+chmod +x $CURRENT_DIR/$COMPRESS_SCRIPT
 
-ln -svf $COMPRESS_SCRIPT /bin/$COMPRESS_SCRIPT
+ln -svf $CURRENT_DIR/$COMPRESS_SCRIPT /bin/$COMPRESS_SCRIPT
 
-echo "You can now use the script anywhere with: python3 ${COMPRESS_SCRIPT}"
+echo "You can now use the script anywhere with: ${COMPRESS_SCRIPT}"

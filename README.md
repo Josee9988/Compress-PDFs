@@ -47,9 +47,9 @@
     mv -v .env.example .env # rename to .env
     ```
 
-6. Add you [IlovePDF](https://developer.ilovepdf.com/) public key
+6. Add your [IlovePDF](https://developer.ilovepdf.com/) public key
 
-    * Modify the `.env` file add update the **`PUBLIC_KEY`** variable with your own public key from [the IlovePDF developer's site](https://developer.ilovepdf.com/)
+    * Modify the `.env` file add update the **`PUBLIC_KEY`** variable with your public key from [the IlovePDF developer's site](https://developer.ilovepdf.com/)
 
 7. Run it ;)
 
@@ -63,7 +63,7 @@
 
 * After running the script `MAKE_SCRIPT_GLOBAL.sh` you can call the script from anywhere in your system with: `python3 compress.py`
 
-* The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up in order to compress all the pdfs inside the passed directory.
+* The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up to compress all the pdfs inside the passed directory.
 
 * Script profile
 
@@ -78,6 +78,7 @@
 ```bash
 .
 ├── compress.py
+├── .env.example
 ├── .github
 │   ├── CODE_OF_CONDUCT.md
 │   ├── CODEOWNERS
@@ -100,10 +101,11 @@
 │   ├── settings.yml
 │   └── SUPPORT.md
 ├── .gitignore
+├── LICENSE
 ├── MAKE_SCRIPT_GLOBAL.sh
 └── README.md
 
-2 directories, 23 files
+2 directories, 25 files
 ```
 
 ---
@@ -111,6 +113,7 @@
 ## 📝 **Additional notes**
 
 * In case an error happens because there are multiple pdfs with the same name or simply the program doesn't know how to replace them, an error will be prompt and you will have to manually move the compressed pdf (which will be in the directory passed as an argument) to the desired directory.
+* The cloned repository should not be  removed as it contains the symbolic link which is globally executable. You can manually move the file and the .env file to your /bin/ folder if you wish.
 
 ---
 
@@ -126,7 +129,7 @@ Compress-PDFs was generated from *[Josee9988/project-template](https://github.co
 
 ---
 
-## 🎉 Was the pdf compresser helpful? Help us raise these numbers up
+## 🎉 Was the pdf compressor helpful? Help us raise these numbers up
 
 [![Github followers](https://img.shields.io/github/followers/Josee9988.svg?style=social)](https://github.com/Josee9988)
 [![Github stars](https://img.shields.io/github/stars/Josee9988/Compress-PDFs.svg?style=social)](https://github.com/Josee9988/Compress-PDFs/stargazers)
