@@ -54,22 +54,40 @@
 7. Run it ;)
 
     ```bash
-    python3 compress.py /PATH/TO/YOUR/DIR/
+    compress.py /RELATIVE/OR/ABSOLUTE/PATH/TO/YOUR/DIR/
     ```
 
 ---
 
 ## 🚀 **Usage**
 
-* After running the script `MAKE_SCRIPT_GLOBAL.sh` you can call the script from anywhere in your system with: `python3 compress.py`
+* After running the script `MAKE_SCRIPT_GLOBAL.sh` you can call the script from anywhere in your system with: `compress.py <path>`
 
 * The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up to compress all the pdfs inside the passed directory.
 
 * Script profile
 
   ```bash
-  python3 compress.py <Directory path>
+  compress.py <Directory path>
   ```
+
+* Some examples of usage
+
+  1. Using an absolute path
+
+      ```bash
+      compress.py /home/username/Documents/MyFolder
+      ```
+
+  2. Using a relative path
+
+      ```bash
+      compress.py .
+      ```
+
+      ```bash
+      compress.py /dirFromWhereIAm/whatever/
+      ```
 
 ---
 
@@ -121,7 +139,7 @@ Compress-PDFs was generated from *[Josee9988/project-template](https://github.co
 
 ---
 
-🕵️ Extra recommendations
+## 🕵️ Extra recommendations
 
 * Always check the console output to check if any error happened and if so, you will have to manually move the non-moved compressed file to its location.
 
