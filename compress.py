@@ -57,7 +57,7 @@ time.sleep(3)  # wait for the task to finish
 zip_file_location = glob.glob(ACTION_PATH + "/" + COMPRESSED_ZIP_PATTERN)[0]
 with zipfile.ZipFile(zip_file_location, 'r') as zip_ref:
     zip_ref.extractall(ACTION_PATH)
-time.sleep(5)
+time.sleep(3)
 compressed_pdfs = glob.glob(os.path.join(ACTION_PATH, COMPRESSED_PDFS_PATTERN))
 
 # replace the recently compressed files to their original file location
