@@ -67,7 +67,7 @@
 
 * After running the script `MAKE_SCRIPT_GLOBAL.sh` you can call the script from anywhere in your system with: `compress.py <path>`
 
-* The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up to compress all the pdfs inside the passed directory.
+* The script receives only one argument and it is the path of the directory that will be recursively compressed. All the subfolders will be looked up to compress all the pdfs inside the passed directory as an argument.
 
 * Script profile
 
@@ -100,7 +100,7 @@
 ```bash
 .
 ├── compress.py
-├── .env.example
+├── .env
 ├── .github
 │   ├── CODE_OF_CONDUCT.md
 │   ├── CODEOWNERS
@@ -134,6 +134,7 @@
 
 ## 📝 **Additional notes**
 
+* The compressed PDF's will automatically replace your old and uncompressed ones.
 * In case an error happens because there are multiple pdfs with the same name or simply the program doesn't know how to replace them, an error will be prompt and you will have to manually move the compressed pdf (which will be in the directory passed as an argument) to the desired directory.
 * The cloned repository should not be  removed as it contains the symbolic link which is globally executable. You can manually move the file and the .env file to your /bin/ folder if you wish.
 
