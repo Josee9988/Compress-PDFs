@@ -22,6 +22,10 @@
 
 1. Clone the repository and `cd` into it
 
+    ```bash
+    git clone git@github.com:Josee9988/Compress-PDFs.git && cd Compress-PDFs
+    ```
+
 2. *Install pip3*
 
     ```bash
@@ -153,7 +157,6 @@ Compress-PDFs was generated from *[Josee9988/project-template](https://github.co
 [![Github stars](https://img.shields.io/github/stars/Josee9988/Compress-PDFs.svg?style=social)](https://github.com/Josee9988/Compress-PDFs/stargazers)
 [![Github watchers](https://img.shields.io/github/watchers/Josee9988/Compress-PDFs.svg?style=social)](https://github.com/Josee9988/Compress-PDFs/watchers)
 [![Github forks](https://img.shields.io/github/forks/Josee9988/Compress-PDFs.svg?style=social)](https://github.com/Josee9988/Compress-PDFs/network/members)
-<!-- MODIFY THIS LINK TO YOUR MAIN DONATING SITE IF YOU ARE NOT IN THE GITHUB SPONSORS PROGRAM -->
 [![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=github-sponsors&color=red&style=social)](https://github.com/sponsors/Josee9988)
 
 Enjoy! 😃
