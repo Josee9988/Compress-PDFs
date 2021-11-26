@@ -10,6 +10,8 @@
   </a>
 </div>
 
+⚠️This project is not fully finished or tester, it might cause some errors with in certain situations. Please, do a backup of the folders you want to compress before using this script.⚠️
+
 ---
 
 ## 🤔 **About the project**
@@ -148,7 +150,7 @@ Compress-PDFs was generated from *[Josee9988/project-template](https://github.co
 
 * Always check the console output to check if any error happened and if so, you will have to manually move the non-moved compressed file to its location.
 
-* Also always perform a copy of the folder before using the script as it will remove the old PDFs and it might cause some data loss if an error occurs.
+* Also, always perform a copy of the folder before using the script as it will remove the old PDFs, and it might cause some data loss if an error occurs.
 
 ---
 
